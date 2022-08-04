@@ -4,7 +4,7 @@
 --もし非表示の場合、現在の仮想デスクトップに新しいウィンドウを作る
 if application "Finder" is not running then --もしFinderが起動していない場合、起動して現在の仮想デスクトップに新しいウィンドウを作る
 	tell application "Finder"
-		activate
+		launch --ここactivateにしたら、以前開いていたデスクトップにかってに移動してしまう。
 		make new Finder window to "Macintosh HD:Users:kt:Downloads"
 		set bounds of window 1 to {670, 300, 1500, 810} --set bounds of window 1 of application "'アプリケーション名'" to {左上X座標,左上Y座標,右下X座標,右下Y座標}
 		set frontmost to true --activateしているのになぜか最前面に来ないのでこの行を追加している。activeでも良いはず

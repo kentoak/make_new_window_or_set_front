@@ -1,6 +1,6 @@
 if application "Terminal" is not running then
 	tell application "Terminal"
-		activate
+		launch --ここactivateにしたら、以前開いていたデスクトップにかってに移動してしまう。
 		do script ""
 		set bounds of window 1 to {250, 550, 840, 940}
 		activate
